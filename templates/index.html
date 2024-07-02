@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>F1 Data Dashboard</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+	</head>
+	<body>
+		<h1>FormulaGeek</h1>
+
+		<label for="driver1">Select Driver 1:</label>
+		<select id="driver1">
+			<option value="VER">Verstappen</option>
+			<option value="HAM">Hamilton</option>
+			<option value="RUS">Russel</option>
+			<option value="PER">Perez</option>
+			<option value="NOR">Norris</option>
+			<option value="PIA">Piastri</option>
+			<option value="LEC">Leclerc</option>
+			<option value="SAI">Sainz</option>
+			<option value="ALO">Alonso</option>
+			<option value="STR">Stroll</option>
+			<option value="RIC">Ricciardo</option>
+			<option value="TSU">Tsunoda</option>
+			<option value="HUL">Hulkenberg</option>
+			<option value="MAG">Magnussen</option>
+			<option value="GAS">Gasly</option>
+			<option value="OCO">Ocon</option>
+			<option value="ALB">Albon</option>
+			<option value="SAR">Sargeant</option>
+			<option value="BOT">Bottas</option>
+			<option value="ZHO">Zhou</option>
+			<!-- Add more driver options here -->
+		</select>
+
+		<label for="driver2">Select Driver 2:</label>
+		<select id="driver2">
+			<option value="VER">Verstappen</option>
+			<option value="HAM">Hamilton</option>
+			<option value="RUS">Russel</option>
+			<option value="PER">Perez</option>
+			<option value="NOR">Norris</option>
+			<option value="PIA">Piastri</option>
+			<option value="LEC">Leclerc</option>
+			<option value="SAI">Sainz</option>
+			<option value="ALO">Alonso</option>
+			<option value="STR">Stroll</option>
+			<option value="RIC">Ricciardo</option>
+			<option value="TSU">Tsunoda</option>
+			<option value="HUL">Hulkenberg</option>
+			<option value="MAG">Magnussen</option>
+			<option value="GAS">Gasly</option>
+			<option value="OCO">Ocon</option>
+			<option value="ALB">Albon</option>
+			<option value="SAR">Sargeant</option>
+			<option value="BOT">Bottas</option>
+			<option value="ZHO">Zhou</option>
+			<!-- Add more driver options here -->
+		</select>
+
+		<label for="session">Select Session:</label>
+		<select id="session">
+			<option value="FP1">FP1</option>
+			<option value="FP2">FP2</option>
+			<option value="FP3">FP3</option>
+			<option value="Q">Qualifying</option>
+			<option value="R">Race</option>
+		</select>
+
+		<button id="updateButton">Update Graph</button>
+
+		<div id="plot"></div>
+
+		<h2>Race Results</h2>
+		<button id="getResultsButton">Get Race Results</button>
+		<table id="raceResultsTable" border="1">
+			<thead>
+				<tr>
+					<th>Position</th>
+					<th>Driver</th>
+					<th>Lap Time</th>
+					<th>Points</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Data will be inserted here -->
+			</tbody>
+		</table>
+	</body>
+</html>
